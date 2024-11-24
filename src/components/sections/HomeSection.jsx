@@ -1,9 +1,12 @@
 import { BaseSection } from "../layout/BaseSection";
+import { DecoderText } from '../decoder-text/decoder-text';
 
 export const HomeSection = () => {
   return (
     <BaseSection bgcolor={"orange"} id='home'>
-      <h1>INICIO</h1>
+      <div className="tracking-widest text-xl">
+       <DecoderText text='JAIME HERNÁNDEZ' delay={500} />
+      </div>
     </BaseSection>
   );
 };
