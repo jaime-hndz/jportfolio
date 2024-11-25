@@ -1,7 +1,7 @@
 export const Menu = () => {
   return (
     <div
-      className="bg-transparent h-screen fixed flex gap-5 pt-5"
+      className="bg-transparent h-screen fixed flex gap-5 pt-5 z-50"
       style={{ textOrientation: "mixed", writingMode: "vertical-rl" }}
     >
       <div>

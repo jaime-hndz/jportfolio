@@ -1,5 +1,6 @@
 import { BaseSection } from "../layout/BaseSection";
 import { DecoderText } from '../decoder-text/decoder-text';
+import MouseScroll from "../mouse-scroll/MouseScroll";
 
 export const HomeSection = () => {
   return (
@@ -7,6 +8,7 @@ export const HomeSection = () => {
       <div className="tracking-widest text-xl">
        <DecoderText text='JAIME HERNÁNDEZ' delay={500} />
       </div>
+      <MouseScroll />
     </BaseSection>
   );
 };
