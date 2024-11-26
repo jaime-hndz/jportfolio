@@ -1,40 +1,27 @@
-h1 {
-  font-family: Consolas, monaco, monospace;
-  font-size: 24px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 700;
-  line-height: 26.4px;
+body{
+  cursor: none !important;
 }
-h3 {
-  font-family: Consolas, monaco, monospace;
-  font-size: 14px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 700;
-  line-height: 15.4px;
+
+.cursor-dot {
+  width: 5px;
+  height: 5px;
+  background-color: white;
 }
-p {
-  font-family: Consolas, monaco, monospace;
-  font-size: 14px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  line-height: 20px;
+
+.cursor-outline{
+  width: 20px;
+  height: 20px;
+  border: 2px solid hsla(0, 0%, 100%, 0.5);
+
 }
-blockquote {
-  font-family: Consolas, monaco, monospace;
-  font-size: 21px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  line-height: 30px;
-}
-pre {
-  font-family: Consolas, monaco, monospace;
-  font-size: 13px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  line-height: 18.5714px;
+
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
 }

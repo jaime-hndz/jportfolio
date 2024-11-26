@@ -7,7 +7,7 @@ export const Menu = () => {
   };
 
   const MenuOption = ({text, id}) => (
-    <div className="rotate-90 my-8 cursor-pointer select-none" onClick={() => scrollToSection(id)}>
+    <div className="rotate-90 my-8  select-none transition ease-in-out  hover:text-white" onClick={() => scrollToSection(id)}>
       {text}
     </div>
   );
