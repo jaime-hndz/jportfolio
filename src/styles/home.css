@@ -1,6 +1,6 @@
 .mouse-scroll {
-    width: 1em;
-    height: 2em;
+    width: 0.8em;
+    height: 1.6em;
     border: solid 1.5px #131515;
     border-radius: 30px;
     position: fixed;
@@ -15,8 +15,8 @@
 
 .mouse-scroll::before {
     content: '';
-    width: 0.2em;
-    height: 0.2em;
+    width: 0.1em;
+    height: 0.3em;
     border-radius: 50%;
     background: #131515;
     position: absolute;

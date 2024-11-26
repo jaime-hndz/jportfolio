@@ -1,22 +1,22 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 
-export const BaseSection = ({ children, bgcolor, id }) => {
+export const BaseSection = ({ children, id }) => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   const colors = {
-    orange: '', // Lo manejaremos de forma especial
-    red: "bg-red-600",
-    blue: "bg-blue-600",
-    green: "bg-green-600",
+    home: '', // Lo manejaremos de forma especial
+    about: "bg-slate-900",
+    projects: "bg-gray-900",
+    contact: "bg-zinc-900",
   };
 
   return (
     <div
-      className={`${colors[bgcolor]} w-full h-screen flex items-center justify-center relative`}
+      className={`${colors[id]} w-full h-screen flex items-center justify-center relative`}
       id={id}
     >
-      {bgcolor === 'orange' && (
+      {id === 'home' && (
         <>
           {!isVideoLoaded && (
             <div
@@ -39,7 +39,7 @@ export const BaseSection = ({ children, bgcolor, id }) => {
         </>
       )}
 
-      {bgcolor !== 'orange' && <div className="absolute top-0 left-0 w-full h-full" />}
+      {id !== 'home' && <div className="absolute top-0 left-0 w-full h-full" />}
       <div className="relative">
         {children}
       </div>

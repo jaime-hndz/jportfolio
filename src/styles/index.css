@@ -1,4 +1,6 @@
 @import './home.css';
+@import './menu.css';
+
 
 @tailwind base;
 @tailwind components;

@@ -11,8 +11,8 @@ export const PortfolioScreen = () => {
       <Menu />
       <div className=" w-screen w-full">
         <HomeSection />
-        <PrimaryProjectsSection />
         <AboutSection />
+        <PrimaryProjectsSection />
         <ContactSection />
       </div>
       </div>

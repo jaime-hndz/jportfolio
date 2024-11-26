@@ -4,9 +4,14 @@ import MouseScroll from "../mouse-scroll/MouseScroll";
 
 export const HomeSection = () => {
   return (
-    <BaseSection bgcolor={"orange"} id='home'>
-      <div className="tracking-widest text-xl">
+    <BaseSection id='home'>
+      <div className="tracking-widest text-l">
        <DecoderText text='JAIME HERNÁNDEZ' delay={500} />
+      </div>
+      <div className="text-5xl font-consolas">
+        <div className="w-80" >
+          <h1>Desarrollador  de software</h1>
+        </div>
       </div>
       <MouseScroll />
     </BaseSection>

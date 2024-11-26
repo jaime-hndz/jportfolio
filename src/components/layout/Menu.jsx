@@ -1,21 +1,25 @@
 export const Menu = () => {
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const MenuOption = ({text, id}) => (
+    <div className="rotate-90 my-8 cursor-pointer select-none" onClick={() => scrollToSection(id)}>
+      {text}
+    </div>
+  );
+
   return (
-    <div
-      className="bg-transparent h-screen fixed flex gap-5 pt-5 z-50"
-      style={{ textOrientation: "mixed", writingMode: "vertical-rl" }}
-    >
+    <div className="bg-transparent h-screen fixed gap-5 pt-5 z-50 font-consolas flex flex-col items-center -m-3">
       <div>
-        <a href="#home">Inicio</a>
+        <div className="logo" onClick={() => scrollToSection("home")} />
       </div>
-      <div>
-        <a href="#projects">Proyectos</a>
-      </div>
-      <div>
-        <a href="#about">Sobre mí</a>
-      </div>
-      <div>
-        <a href="#contact">Contacto</a>
-      </div>
+      <MenuOption text="Sobre mí" id="about" />
+      <MenuOption text="Proyectos" id="projects" />
+      <MenuOption text="Contacto" id="contact" />
     </div>
   );
 };
