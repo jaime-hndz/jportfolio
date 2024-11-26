@@ -7,8 +7,8 @@ export const BaseSection = ({ children, id }) => {
   const colors = {
     home: '', // Lo manejaremos de forma especial
     about: "bg-slate-900",
-    projects: "bg-gray-900",
-    contact: "bg-zinc-900",
+    projects: "bg-gradient-to-b from-slate-900 to-gray-900",
+    contact: "bg-gradient-to-b from-gray-900 to-zinc-900",
   };
 
   return (

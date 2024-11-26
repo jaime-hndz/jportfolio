@@ -7,13 +7,13 @@ export const Menu = () => {
   };
 
   const MenuOption = ({text, id}) => (
-    <div className="rotate-90 my-8  select-none transition ease-in-out  hover:text-white" onClick={() => scrollToSection(id)}>
+    <div className="rotate-90 py-12  select-none transition ease-in-out  hover:text-sky-400 hover:translate-x-2" onClick={() => scrollToSection(id)}>
       {text}
     </div>
   );
 
   return (
-    <div className="bg-transparent h-screen fixed gap-5 pt-5 z-50 font-consolas flex flex-col items-center -m-3">
+    <div className="bg-gradient-to-r from-black h-screen fixed gap-7 pt-5 z-50 font-consolas text-white flex flex-col items-center -m-3  text-2xl">
       <div>
         <div className="logo" onClick={() => scrollToSection("home")} />
       </div>
