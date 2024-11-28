@@ -13,7 +13,7 @@ export const Menu = () => {
   );
 
   return (
-    <div className="bg-gradient-to-r from-black h-screen fixed gap-7 pt-5 z-50 font-consolas text-white flex flex-col items-center -m-3  text-2xl">
+    <div className="bg-gradient-to-r from-black h-screen fixed gap-7 pt-5 z-50 font-consolas text-white flex flex-col items-center -mx-3  text-2xl h-screen">
       <div>
         <div className="logo" onClick={() => scrollToSection("home")} />
       </div>
