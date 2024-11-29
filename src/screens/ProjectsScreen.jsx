@@ -2,6 +2,7 @@ import { RollbackOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import BentoModal from "../components/bento-modal/BentoModal";
+import { Tag } from "antd";
 
 const effect = "hover:translate-y-1 hover:translate-x-1 border-r-8 border-b-8 hover:border-none"
 export const ProjectsScreen = () => {
@@ -20,7 +21,16 @@ export const ProjectsScreen = () => {
               >
                 <RollbackOutlined className={`text-5xl text-white`} />
               </div>
-              <BentoModal component={<div className={`row-col2 right bg-red-500 ${effect} border-red-600`}></div>} />
+              <BentoModal component={<div className={`row-col2 image ${effect} border-gray-100 p-10 relative`}>
+                <div className="text-6xl text-slate-700 tracking-widest text-2xl font-consolas ">Neo-bifrost</div>
+                <div className="absolute bottom-3 right-3">
+                  <Tag color="purple">C#</Tag>
+                  <Tag color="blue">Reactjs</Tag>
+                  <Tag color="red">JWT</Tag>
+                  
+
+                </div>	
+              </div>} />
               
             </div>
             <div className={`row row2 bg-amber-500 ${effect} border-amber-600`}></div>

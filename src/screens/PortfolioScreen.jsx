@@ -16,6 +16,7 @@ export const PortfolioScreen = () => {
         <AboutSection />
         <PrimaryProjectsSection />
         <ContactSection />
+        <div className="w-full bg-gradient-to-t from-black to-zinc-900 h-32 items-center text-white font-consolas flex items-center justify-center">© 2024 Jaime Hernandez </div>
       </div>
       <Menu2 />
 

@@ -3,6 +3,8 @@
 @import './base.css';
 @import './form.css';
 @import './bento.css';
+@import './modal.css';
+
 
 @tailwind base;
 @tailwind components;

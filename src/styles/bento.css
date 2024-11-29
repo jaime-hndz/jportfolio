@@ -57,3 +57,10 @@
     flex: 3;
     border-radius: 2em;
 }
+
+.image {
+    background: linear-gradient(to bottom, transparent, rgb(255, 255, 255)), url('/src/resources/neo-bifrost-preview.png');
+    background-size: cover; /* Hace que la imagen cubra todo el ancho y alto del contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
