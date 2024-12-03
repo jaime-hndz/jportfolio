@@ -25,7 +25,7 @@ export const TypingEffect = () => {
   
     return (
       <div className="text-7xl font-consolas">
-        <div className="w-[480px]">
+        <div className="w-[520px]">
           <h1>
             {displayedText}
             <span className="cursor">|</span>

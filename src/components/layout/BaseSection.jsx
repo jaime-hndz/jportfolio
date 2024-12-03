@@ -5,8 +5,8 @@ export const BaseSection = ({ children, id }) => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   const colors = {
-    home: '', // Lo manejaremos de forma especial
-    about: "bg-slate-900",
+    home: 'bg-black', // Lo manejaremos de forma especial
+    about: "bg-gradient-to-t from-slate-900 from-70%",
     projects: "bg-gradient-to-b from-slate-900 to-gray-900",
     contact: "bg-gradient-to-b from-gray-900 to-zinc-900",
   };
@@ -20,13 +20,13 @@ export const BaseSection = ({ children, id }) => {
         <>
           {!isVideoLoaded && (
             <div
-              className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
+              className="fixed top-0 left-0 w-full h-full bg-cover bg-center bg-fixed"
               style={{ backgroundImage: "url('/src/resources/background.jpg')" }}
             />
           )}
 
           <video
-            className={`absolute top-0 left-0 w-full h-full object-cover ${
+            className={`fixed top-0 left-0 w-full h-full object-cover ${
               isVideoLoaded ? 'opacity-100' : 'opacity-0'
             } transition-opacity duration-700`}
             src="/src/resources/background.mp4"
@@ -48,7 +48,7 @@ export const BaseSection = ({ children, id }) => {
 };
 
 BaseSection.propTypes = {
-    children: PropTypes.node.isRequired,
-    bgcolor: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired
+  children: PropTypes.node.isRequired,
+  bgcolor: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired
 };
