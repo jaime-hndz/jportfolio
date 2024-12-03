@@ -24,7 +24,7 @@ export const TypingEffect = () => {
     }, [fullText, typingSpeed]);
   
     return (
-      <div className="text-7xl font-consolas">
+      <div className="text-7xl ">
         <div className="w-[520px]">
           <h1>
             {displayedText}

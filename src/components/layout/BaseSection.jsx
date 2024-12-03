@@ -6,9 +6,9 @@ export const BaseSection = ({ children, id }) => {
 
   const colors = {
     home: 'bg-black', // Lo manejaremos de forma especial
-    about: "bg-gradient-to-t from-slate-900 from-70%",
-    projects: "bg-gradient-to-b from-slate-900 to-gray-900",
-    contact: "bg-gradient-to-b from-gray-900 to-zinc-900",
+    about: "bg-gradient-to-b from-black/50 to-slate-900/70 ",
+    projects: "bg-gradient-to-b from-slate-900/70 to-slate-900",
+    contact: "bg-slate-900",
   };
 
   return (
@@ -36,6 +36,7 @@ export const BaseSection = ({ children, id }) => {
             playsInline
             onLoadedData={() => setIsVideoLoaded(true)}
           />
+          <div className='h-screen w-full overflow-hidden bg-black/50 absolute'></div>
         </>
       )}
 

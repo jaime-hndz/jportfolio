@@ -31,7 +31,7 @@ export const ContactSection = () => {
       {contextHolder}
       <BaseSection id="contact">
         <div className="text-3xl text-white flex flex-col items-center gap-10 font-bold">
-          <h1>Contactame!!</h1>
+          <div className=" tracking-widest pepe ">Contactame!!</div>
           {!visible ? (
             <>
               <ReCAPTCHA
