@@ -1,71 +1,80 @@
-import { RollbackOutlined } from "@ant-design/icons";
-import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import BentoModal from "../components/bento-modal/BentoModal";
-import { Tag } from "antd";
+import BentoModal from "../components/bento/BentoModal";
+import { BentoGoBack } from "../components/Bento/BentoGoBack";
+import { Row } from "../components/Bento/Row";
+import { Column } from "../components/Bento/Column";
+import { RowCol } from "../components/Bento/RowCol";
+import { Tags } from "../components/Bento/CustomTags";
 
-const effect = "hover:translate-y-1 hover:translate-x-1 border-r-8 border-b-8 hover:border-none"
 export const ProjectsScreen = () => {
-  const navigate = useNavigate();
+  useEffect(() => window.scrollTo(0, 0), []);
 
-  useEffect(() => window.scrollTo(0, 0), [])
   return (
-    <div className={`bg-gray-900`}>
-      <div className={`flex items-center justify-center `}>
-        <div className={`container`}>
-          <div className={`col-left`}>
-            <div className={`row row1`}>
-              <div
-                onClick={() => navigate(-1)}
-                className={`row-col left bg-blue-500 flex items-center justify-center relative ${effect} border-blue-600`}
-              >
-                <RollbackOutlined className={`text-5xl text-white`} />
-              </div>
-              <BentoModal component={<div className={`row-col2 image ${effect} border-gray-100 p-10 relative`}>
-                <div className="text-6xl text-slate-700 tracking-widest text-2xl font-consolas ">Neo-bifrost</div>
-                <div className="absolute bottom-3 right-3">
-                  <Tag color="purple">C#</Tag>
-                  <Tag color="blue">Reactjs</Tag>
-                  <Tag color="red">JWT</Tag>
-                  
-
-                </div>	
-              </div>} />
-              
-            </div>
-            <div className={`row row2 bg-amber-500 ${effect} border-amber-600`}></div>
-            <div className={`row row3`}>
-              <div className={`row-col left bg-red-500 ${effect} border-red-600`}></div>
-              <div className={`row-col right bg-rose-500 ${effect} border-rose-600`}></div>
-            </div>
-          </div>
-          <div className={`col-right`}>
-            <div className={`row top bg-sky-500 ${effect} border-sky-600`}></div>
-            <div className={`row botto bg-orange-500 ${effect} border-orange-600`}></div>
-          </div>
-        </div>
-      </div>
-      <div className={`flex items-center justify-center -translate-y-4 `}>
-        <div className={`container`}>
-        <div className={`col-right`}>
-            <div className={`row top bg-sky-500 ${effect} border-sky-600`}></div>
-            <div className={`row botto bg-orange-500 ${effect} border-orange-600`}></div>
-          </div>
-          <div className={`col-left`}>
-            <div className={`row row1`}>
-              <div
-                className={`row-col left bg-blue-500 flex items-center justify-center relative ${effect} border-blue-600`}
-              >
-              </div>
-              <div className={`row-col2 right bg-red-500 ${effect} border-red-600`}></div>
-            </div>
-            <div className={`row row2 bg-amber-500 ${effect} border-amber-600`}></div>
-            <div className={`row row3`}>
-              <div className={`row-col left bg-red-500 ${effect} border-red-600`}></div>
-              <div className={`row-col right bg-rose-500 ${effect} border-rose-600`}></div>
-            </div>
-          </div>
-
+    <div className="bg-gray-900 transtion ease-in-out h-screen">
+      <div className="flex items-center justify-center">
+        <div className="container">
+          <Column className="left">
+            <Row className="row1">
+              <BentoGoBack />
+              <BentoModal
+                title={"Neo-bifrost"}
+                text={
+                  <>
+                    <p>
+                      El sistema utiliza una API para gestionar la autenticación
+                      mediante JWT (JSON Web Tokens) firmados con llaves
+                      criptográficas asincrónicas. Los usuarios inician sesión a
+                      través de un frontend, donde las credenciales son
+                      validadas por la API utilizando un repositorio que
+                      gestiona los datos de usuarios y estaciones. Si las
+                      credenciales son correctas, se genera un JWT firmado con
+                      una llave privada que contiene información del usuario,
+                      permisos y un tiempo de expiración.
+                    </p>
+                    <p>
+                      Las aplicaciones que consumen la API, como
+                      Sinewave-drawer, verifican los JWT usando la llave
+                      pública, asegurando que los tokens sean genuinos y no
+                      hayan expirado. Los tokens vencen después de un tiempo
+                      establecido y, para obtener uno nuevo, el usuario debe
+                      usar un token de actualización o autenticarse nuevamente.
+                      El sistema sigue el patrón repositorio para separar la
+                      lógica de datos y negocio, lo que facilita su
+                      mantenimiento y escalabilidad.
+                    </p>
+                  </>
+                }
+                images={["neo-bifrost2.gif", "neo-bifrost1.png"]}
+                component={
+                  <RowCol
+                    num={2}
+                    className={"image p-10 relative"}
+                    color="gray"
+                  >
+                    <div className="text-6xl text-slate-700 tracking-widest text-2xl pepe ">
+                      Neo-bifrost
+                    </div>
+                    <Tags tags={["csharp", "react", "jwt"]} />
+                  </RowCol>
+                }
+              />
+            </Row>
+            <Row className={`row3`}>
+              <RowCol className={`left`} color={"amber"} />
+            </Row>
+            <Row className="row3">
+              <RowCol className={`left`} color={"rose"} />
+              <RowCol className={`right`} color={"red"} />
+            </Row>
+          </Column>
+          <Column className="right">
+            <Row className={`row3`}>
+              <RowCol color={"sky"} />
+            </Row>
+            <Row className={`row3`}>
+              <RowCol color={"orange"} />
+            </Row>
+          </Column>
         </div>
       </div>
     </div>
