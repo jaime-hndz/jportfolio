@@ -16,6 +16,9 @@ export const RowCol = ({
     orange: ` bg-orange-500 border-orange-600 shadow-lg shadow-orange-500/50`,
     gray: ` bg-gray-100 border-gray-100 shadow-lg shadow-gray-100/50`,
     blue: ` bg-blue-500 border-blue-600 shadow-lg shadow-blue-500/50`,
+    stone: ` bg-stone-500 border-stone-300 shadow-lg shadow-stone-300/50`,
+    barnablue: ` bg-blue-500 border-sky-800 shadow-lg shadow-sky-900/50`,
+
   };
   return (
     <div

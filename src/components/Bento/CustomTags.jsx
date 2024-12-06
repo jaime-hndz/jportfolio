@@ -4,12 +4,17 @@ const CustomTag = ({ id }) => {
       csharp: "C#",
       react: "React",
       jwt: "JWT",
+      next: "Nextjs",
+      powerapps: "Power Apps"
     };
   
     const colors = {
       csharp: "purple",
       react: "blue",
       jwt: "red",
+      next: "black",
+      powerapps: "magenta"
+
     };
     return <Tag color={colors[id]}>{names[id]}</Tag>;
   };

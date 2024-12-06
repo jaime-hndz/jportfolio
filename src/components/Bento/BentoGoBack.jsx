@@ -8,7 +8,7 @@ export const BentoGoBack = () => {
     <RowCol
       onClick={() => navigate(-1)}
       className={`left flex items-center justify-center relative`}
-      color="blue"
+      color="red"
     >
       <RollbackOutlined className={"text-5xl text-white"} />
     </RowCol>
