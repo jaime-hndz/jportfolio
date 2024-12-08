@@ -5,7 +5,7 @@ import { Tags } from "./CustomTags";
 import { projectsObject } from "../../helpers/ProjectsObject";
 import { DecoderText } from "../decoder-text/decoder-text";
 
-const BentoModal = ({ id }) => {
+const BentoModal = ({ id, className }) => {
   const carouselRef = React.createRef();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -23,12 +23,12 @@ const BentoModal = ({ id }) => {
     <>
       <RowCol
         num={projectsObject[id].numberColumn}
-        className={`image ${id}-preview p-10 relative`}
+        className={`${id}-preview p-10 relative ${className}`}
         color={projectsObject[id].primaryColor}
         onClick={showModal}
       >
         <div className={projectsObject[id].textStyle}>
-          <DecoderText text={projectsObject[id].title} delay={500} />
+          <DecoderText text={projectsObject[id].title} />
           
         </div>
         <Tags tags={projectsObject[id].tags} />
@@ -48,10 +48,10 @@ const BentoModal = ({ id }) => {
         width={1000}
       >
         <div className="text-white  flex">
-          <div className=" p-10 flex flex-col gap-10">
+          <div className=" p-10 space-y-4 ">
             {projectsObject[id].text}
           </div>
-          <Carousel className="w-96 h-96" ref={carouselRef}>
+          {projectsObject[id].images.length > 0 ? <Carousel className="w-96 h-96" ref={carouselRef}>
             {projectsObject[id].images.map((i) => (
               <div
                 key={i}
@@ -64,7 +64,8 @@ const BentoModal = ({ id }) => {
                 ></div>
               </div>
             ))}
-          </Carousel>
+          </Carousel> : null}
+          
         </div>
       </Modal>
     </>

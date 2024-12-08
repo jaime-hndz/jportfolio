@@ -5,7 +5,8 @@ const CustomTag = ({ id }) => {
       react: "React",
       jwt: "JWT",
       next: "Nextjs",
-      powerapps: "Power Apps"
+      powerapps: "Power Apps",
+      vite: "ViteJS"
     };
   
     const colors = {
@@ -13,7 +14,8 @@ const CustomTag = ({ id }) => {
       react: "blue",
       jwt: "red",
       next: "black",
-      powerapps: "magenta"
+      powerapps: "magenta",
+      vite: "gold"
 
     };
     return <Tag color={colors[id]}>{names[id]}</Tag>;
