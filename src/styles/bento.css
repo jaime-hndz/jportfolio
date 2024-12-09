@@ -74,11 +74,39 @@
 
 }
 
+.bifrost3 {
+    background: url('/src/resources/projects/bifrost/bifrost3.png');
+
+}
+
+.bifrost4 {
+    background: url('/src/resources/projects/bifrost/bifrost4.png');
+
+}
+
+.bifrost5 {
+    background: url('/src/resources/projects/bifrost/bifrost5.png');
+
+}
+
 .sinewave-preview {
     background: linear-gradient(to bottom, transparent, rgb(214 211 209)), url('/src/resources/projects/sinewave/sinewave-preview.png');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
+}
+
+.sinewave1 {
+    background: url('/src/resources/projects/sinewave/sinewave1.png');
+
+}
+.sinewave2 {
+    background: url('/src/resources/projects/sinewave/sinewave2.png');
+
+}
+.sinewave3 {
+    background: url('/src/resources/projects/sinewave/sinewave3.png');
+
 }
 
 .barna-preview {
@@ -87,6 +115,28 @@
     background-position: center; 
     background-repeat: no-repeat; 
 }
+
+
+.barna1 {
+    background: url('/src/resources/projects/barna/barna1.png');
+}
+
+.barna2 {
+    background: url('/src/resources/projects/barna/barna2.png');
+}
+
+.barna3 {
+    background: url('/src/resources/projects/barna/barna3.png');
+}
+
+.barna4 {
+    background: url('/src/resources/projects/barna/barna4.png');
+}
+
+.invoice1 {
+    background: url('/src/resources/projects/invoice/invoice1.gif');
+}
+
 
 .portfolio-preview {
     background: linear-gradient(to bottom, transparent, black), url('/src/resources/projects/portfolio/portfolio.png');
@@ -100,4 +150,23 @@
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
+}
+
+.transporte1 {
+    background: url('/src/resources/projects/transporte/transporte1.png');
+}
+.transporte2 {
+    background: url('/src/resources/projects/transporte/transporte2.png');
+}
+.transporte3 {
+    background: url('/src/resources/projects/transporte/transporte3.png');
+}
+.transporte4 {
+    background: url('/src/resources/projects/transporte/transporte4.png');
+}
+.transporte5 {
+    background: url('/src/resources/projects/transporte/transporte5.png');
+}
+.transporte6 {
+    background: url('/src/resources/projects/transporte/transporte6.png');
 }

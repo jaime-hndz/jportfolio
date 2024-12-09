@@ -27,7 +27,7 @@ const BentoModal = ({ id, className }) => {
         color={projectsObject[id].primaryColor}
         onClick={showModal}
       >
-        <div className={projectsObject[id].textStyle}>
+        <div className={`${projectsObject[id].textStyle} select-none`}>
           <DecoderText text={projectsObject[id].title} />
           
         </div>
@@ -49,7 +49,7 @@ const BentoModal = ({ id, className }) => {
       >
         <div className="text-white  flex">
           <div className=" p-10 space-y-4 ">
-            {projectsObject[id].text}
+            {projectsObject[id].text.map((p,i) => <p key={i}>{p}</p>)}
           </div>
           {projectsObject[id].images.length > 0 ? <Carousel className="w-96 h-96" ref={carouselRef}>
             {projectsObject[id].images.map((i) => (
