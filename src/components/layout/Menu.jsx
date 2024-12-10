@@ -1,4 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 export const Menu = () => {
+  const {t} = useTranslation()
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
@@ -17,9 +20,9 @@ export const Menu = () => {
       <div>
         <div className="logo" onClick={() => scrollToSection("home")} />
       </div>
-      <MenuOption text="Sobre mí" id="about" />
-      <MenuOption text="Proyectos" id="projects" />
-      <MenuOption text="Contacto" id="contact" />
+      <MenuOption text={t('aboutTitle')} id="about" />
+      <MenuOption text={t('projectsTitle')} id="projects" />
+      <MenuOption text={t('contactTitle')} id="contact" />
     </div>
   );
 };

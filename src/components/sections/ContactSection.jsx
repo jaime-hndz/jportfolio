@@ -1,14 +1,19 @@
 import { Button, message } from "antd";
 import { BaseSection } from "../layout/BaseSection";
 import ReCAPTCHA from "react-google-recaptcha";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CopyOutlined } from "@ant-design/icons";
+import { useTranslation } from "react-i18next";
 
 export const ContactSection = () => {
   const [capVal, setCapVal] = useState(null);
   const [visible, setVisible] = useState(false);
   const [messageApi, contextHolder] = message.useMessage();
+  const {t, i18n} = useTranslation()
 
+  useEffect(() => {
+  }, [i18n.language])
+  
   const copyToClipboard = () => {
     navigator.clipboard
       .writeText("jaime25112002@gmail.com")
@@ -31,12 +36,14 @@ export const ContactSection = () => {
       {contextHolder}
       <BaseSection id="contact">
         <div className="text-3xl text-white flex flex-col items-center gap-10 font-bold">
-          <div className=" tracking-widest pepe ">Contactame!!</div>
+          <div className=" tracking-widest pepe ">{t('contactMessage')}</div>
           {!visible ? (
             <>
               <ReCAPTCHA
                 sitekey="6LehSIsqAAAAAPwRqferKwO3B_30Pl3FqgOVoMYW"
                 onChange={(val) => setCapVal(val)}
+                lang="fr"
+                hl={i18n.language}
               />{" "}
               <div>
                 <Button
@@ -45,7 +52,7 @@ export const ContactSection = () => {
                   onClick={() => setVisible(true)}
                   className="boton"
                 >
-                  Ver correo electronico
+                  {t('seeMail')}
                 </Button>
               </div>
             </>

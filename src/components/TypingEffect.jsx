@@ -1,13 +1,17 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export const TypingEffect = () => {
-    const fullText = "Desarrollador de software";
+  const { t } = useTranslation();
+
+
+    const fullText = t('title')
     const [displayedText, setDisplayedText] = useState("");
     const typingSpeed = 100;
   
     useEffect(() => {
-      let index = 0;
-  
+      let index = -1;
+      setDisplayedText("")
       const typeCharacter = () => {
         if (index < fullText.length - 1) {
           setDisplayedText((prev) => prev + fullText[index]);

@@ -4,10 +4,12 @@ import { RowCol } from "./RowCol";
 import { LabelTags, Tags } from "./CustomTags";
 import { projectsObject } from "../../helpers/ProjectsObject";
 import { DecoderText } from "../decoder-text/decoder-text";
+import { useTranslation } from "react-i18next";
 
 const BentoModal = ({ id, className }) => {
   const carouselRef = React.createRef();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const {t} = useTranslation();
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -27,7 +29,7 @@ const BentoModal = ({ id, className }) => {
         onClick={showModal}
       >
         <div className={`${projectsObject[id].textStyle} select-none`}>
-          <DecoderText text={projectsObject[id].title} />
+          <DecoderText text={projectsObject[id]['titleEN'] ?? ""} delay={1000} />
           
         </div>
         <Tags tags={projectsObject[id].tags} />
@@ -38,7 +40,7 @@ const BentoModal = ({ id, className }) => {
         cancelButtonProps={false}
         title={
           <div className="text-2xl font-bold tracking-widest">
-            {projectsObject[id].title}
+            {projectsObject[id]['titleEN']}
           </div>
         }
         open={isModalOpen}
@@ -48,7 +50,7 @@ const BentoModal = ({ id, className }) => {
       >
         <div className="text-white  flex">
           <div className=" p-10 space-y-4 ">
-            {projectsObject[id].text.map((p,i) => <p key={i}>{p}</p>)}
+            {projectsObject[id][t('language').toLowerCase()].map((p,i) => <p key={i}>{p}</p>)}
           </div>
           {projectsObject[id].images.length > 0 ? <Carousel className="w-96 h-96" ref={carouselRef}>
             {projectsObject[id].images.map((i) => (
