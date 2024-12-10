@@ -21,10 +21,16 @@ export const RowCol = ({
     teal: ` bg-black border-black shadow-lg shadow-black`, 
 
   };
+  const randomDelay = Math.random() * 1.5; 
+
+
   return (
     <div
       onClick={onClick}
       className={`row-col${num} ${effect}  ${className} ${colors[color]}`}
+      style={{
+        animationDelay: `${randomDelay}s`, // Aplica el retraso al estilo
+      }}
     >
       {children}
     </div>

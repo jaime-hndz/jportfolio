@@ -51,12 +51,29 @@
 .row-col{
     flex: 1;
     border-radius: 2em;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+    animation-delay: var(--animation-delay, 0s);
 }
 
 .row-col2{
     flex: 3;
     border-radius: 2em;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+    animation-delay: var(--animation-delay, 0s);
 }
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px); /* Efecto de desplazamiento */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
 .bifrost-preview {
     background: linear-gradient(to bottom, transparent, rgb(255, 255, 255)), url('/src/resources/projects/bifrost/neo-bifrost-preview.png');

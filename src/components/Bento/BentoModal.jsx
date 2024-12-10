@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { Carousel, Modal } from "antd";
 import { RowCol } from "./RowCol";
-import { Tags } from "./CustomTags";
+import { LabelTags, Tags } from "./CustomTags";
 import { projectsObject } from "../../helpers/ProjectsObject";
 import { DecoderText } from "../decoder-text/decoder-text";
 
 const BentoModal = ({ id, className }) => {
   const carouselRef = React.createRef();
-
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
     setIsModalOpen(true);
@@ -23,7 +22,7 @@ const BentoModal = ({ id, className }) => {
     <>
       <RowCol
         num={projectsObject[id].numberColumn}
-        className={`${id}-preview p-10 relative ${className}`}
+        className={`${id}-preview p-10 relative ${className} group`}
         color={projectsObject[id].primaryColor}
         onClick={showModal}
       >
@@ -67,6 +66,7 @@ const BentoModal = ({ id, className }) => {
           </Carousel> : null}
           
         </div>
+        <LabelTags tags={projectsObject[id].tags} />
       </Modal>
     </>
   );
