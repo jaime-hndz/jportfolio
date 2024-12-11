@@ -29,7 +29,7 @@ const BentoModal = ({ id, className }) => {
         onClick={showModal}
       >
         <div className={`${projectsObject[id].textStyle} select-none`}>
-          <DecoderText text={projectsObject[id]['titleEN'] ?? ""} delay={1000} />
+          <DecoderText text={projectsObject[id][`title${t('language')}`] ?? ""} delay={1000} />
           
         </div>
         <Tags tags={projectsObject[id].tags} />
@@ -40,7 +40,7 @@ const BentoModal = ({ id, className }) => {
         cancelButtonProps={false}
         title={
           <div className="text-2xl font-bold tracking-widest">
-            {projectsObject[id]['titleEN']}
+            {projectsObject[id][`title${t('language')}`]}
           </div>
         }
         open={isModalOpen}

@@ -25,9 +25,9 @@ export const Menu2 = () => {
   }, [i18n]);
 
   return (
-    <div className=" h-screen fixed right-4 gap-4 pt-5 z-50 font-consolas text-white flex flex-col items-center text-2xl">
+    <div className=" h-screen fixed right-0 pt-1 z-50 font-consolas text-white flex flex-col items-center text-2xl">
       <Link
-        className="text-4xl transition ease-in-out  hover:text-sky-400 hover:-translate-x-2 cursor-none"
+        className="p-4 text-4xl transition ease-in-out  hover:text-sky-400 hover:-translate-x-2 cursor-none"
         target="_blank"
         to="https://www.linkedin.com/in/jaime-rafael-hernandez-746a14203 "
         blan
@@ -36,14 +36,14 @@ export const Menu2 = () => {
         <LinkedinFilled />{" "}
       </Link>
       <Link
-        className="text-4xl transition ease-in-out  hover:text-sky-400 hover:-translate-x-2 cursor-none"
+        className="p-4 text-4xl transition ease-in-out  hover:text-sky-400 hover:-translate-x-2 cursor-none"
         target="_blank"
         to="https://github.com/jaime-hndz"
       >
         {" "}
         <GithubFilled />{" "}
       </Link>
-      <button className="text-2xl transition ease-in-out  hover:text-sky-400 hover:-translate-x-2 cursor-none" onClick={() => changeLanguage("en")}>{t('language')}</button>
+      <button className="p-4 text-2xl transition ease-in-out  hover:text-sky-400 hover:-translate-x-2 cursor-none bodoni font-black" onClick={() => changeLanguage("en")}>{t('language')}</button>
     </div>
   );
 };

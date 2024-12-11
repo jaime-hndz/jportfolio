@@ -1,7 +1,7 @@
 import { Button, message } from "antd";
 import { BaseSection } from "../layout/BaseSection";
 import ReCAPTCHA from "react-google-recaptcha";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { CopyOutlined } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
 
@@ -10,9 +10,6 @@ export const ContactSection = () => {
   const [visible, setVisible] = useState(false);
   const [messageApi, contextHolder] = message.useMessage();
   const {t, i18n} = useTranslation()
-
-  useEffect(() => {
-  }, [i18n.language])
   
   const copyToClipboard = () => {
     navigator.clipboard
@@ -36,7 +33,7 @@ export const ContactSection = () => {
       {contextHolder}
       <BaseSection id="contact">
         <div className="text-3xl text-white flex flex-col items-center gap-10 font-bold">
-          <div className=" tracking-widest pepe ">{t('contactMessage')}</div>
+          <div className=" text-5xl tracking-widest pepe font-bold ">{t('contactMessage')}</div>
           {!visible ? (
             <>
               <ReCAPTCHA

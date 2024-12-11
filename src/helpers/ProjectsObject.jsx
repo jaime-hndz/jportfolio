@@ -87,7 +87,7 @@ const projectsObjectRaw = {
     images: ["sinewave1", "sinewave2", "sinewave3"],
     tags: ["next", "csharp", "jwt"],
     primaryColor: "stone",
-    textStyle: `text-6xl text-black tracking-wide text-2xl italic `,
+    textStyle: `text-6xl text-black text-2xl pepe font-bold `,
   },
   barna: {
     titleEN: "Intellectual Production",
@@ -149,11 +149,11 @@ const projectsObjectRaw = {
     images: ["barna1", "barna2", "barna3", "barna4"],
     tags: ["powerapps"],
     primaryColor: "barnablue",
-    textStyle: `text-5xl text-white tracking-wide text-2xl font-bold `,
+    textStyle: `text-5xl text-sky-100 tracking-wide text-2xl font-bold `,
   },
   portfolio: {
-    titleEN: "Jportfolio",
-    titleES: "Jportfolio",
+    titleEN: "Portfolio",
+    titleES: "Portfolio",
     en: [
       `
           The system uses an API to manage authentication through
@@ -196,7 +196,7 @@ const projectsObjectRaw = {
     images: [],
     tags: ["vite"],
     primaryColor: "teal",
-    textStyle: `text-5xl text-white tracking-wide text-2xl font-consolas `,
+    textStyle: `text-5xl text-white tracking-wide text-2xl pepe `,
   },
   invoice: {
     titleEN: "Handdo.Invoice",
@@ -246,7 +246,7 @@ const projectsObjectRaw = {
     images: ["invoice1"],
     tags: ["csharp"],
     primaryColor: "blue",
-    textStyle: `text-4xl text-black text-2xl pepe `,
+    textStyle: `text-4xl text-black text-2xl font-consolas `,
   },
   transporte: {
     titleEN: "Final Career Project",
@@ -294,7 +294,7 @@ const projectsObjectRaw = {
     images: ["transporte1", "transporte2", "transporte3", "transporte4", "transporte5", "transporte6"],
     tags: ["react", "csharp"],
     primaryColor: "barnablue",
-    textStyle: `text-4xl text-white text-2xl pepe font-bold `,
+    textStyle: `text-4xl text-sky-100 text-2xl font-bold italic `,
   },
 };
 
