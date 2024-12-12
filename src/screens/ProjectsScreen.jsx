@@ -22,7 +22,6 @@ export const ProjectsScreen = () => {
             <Row className="row3">
               <BentoModal id={"invoice"} />
               <BentoModal id={"transporte"} />
-
             </Row>
           </Column>
           <Column className="right">
@@ -30,36 +29,27 @@ export const ProjectsScreen = () => {
               <BentoModal id={"barna"} />
             </Row>
             <Row className={`row3`}>
-              <BentoModal id={'portfolio'} />
+              <BentoModal id={"portfolio"} />
             </Row>
           </Column>
         </div>
       </div>
       <div className="flex items-center justify-center -translate-y-4">
-        <div className="container">
-        <Column className="right">
+        <div className="h-[500px] container">
+          <Column className="right">
             <Row className={`row3`}>
-              <BentoModal id={"barna"} />
-            </Row>
-            <Row className={`row3`}>
-              <BentoModal id={'portfolio'} />
+              <BentoModal id={"hospitalCash"} />
             </Row>
           </Column>
           <Column className="left">
             <Row className="row1">
-              <BentoModal id={"bifrost"} />
-              <BentoGoBack />
+              <BentoModal id={"membretes"} className={'left'} />
+              <BentoModal id={"uno"} />
             </Row>
             <Row className={`row3`}>
-              <BentoModal id={"sinewave"} />
-            </Row>
-            <Row className="row3">
-              <BentoModal id={"invoice"} />
-              <BentoModal id={"transporte"} />
-
+              <BentoModal id={"chat"} />
             </Row>
           </Column>
-
         </div>
       </div>
     </div>

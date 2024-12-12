@@ -203,3 +203,27 @@
 .transporte6 {
     background: url('/src/resources/projects/transporte/transporte6.png');
 }
+
+.hospitalCash-preview {
+    background: linear-gradient(to top, transparent, rgb(204 251 241)), url('/src/resources/projects/hospitalCash/preview.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.hospital1 {
+    background: url('/src/resources/projects/hospitalCash/preview.png');
+}
+.hospital2 {
+    background: url('/src/resources/projects/hospitalCash/hospital1.png');
+}
+.hospital3 {
+    background: url('/src/resources/projects/hospitalCash/hospital2.png');
+}
+
+.membretes-preview {
+    background: linear-gradient(to top, transparent, black), url('/src/resources/projects/membretes/preview.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}

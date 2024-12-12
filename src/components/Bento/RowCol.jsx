@@ -19,6 +19,8 @@ export const RowCol = ({
     stone: ` bg-stone-500 border-stone-300 shadow-lg shadow-stone-300/50`,
     barnablue: ` bg-sky-700 border-sky-800 shadow-lg shadow-sky-900/50`,
     teal: ` bg-black border-black shadow-lg shadow-black`, 
+    mint: ` bg-teal-100 border-teal-100 shadow-lg shadow-teal-100`, 
+
 
   };
   const randomDelay = Math.random() * 1.5; 
@@ -27,7 +29,7 @@ export const RowCol = ({
   return (
     <div
       onClick={onClick}
-      className={`row-col${num} ${effect}  ${className} ${colors[color]}`}
+      className={`${num === 2 ? 'row-col2' : 'row-col'} ${effect}  ${className} ${colors[color]}`}
       style={{
         animationDelay: `${randomDelay}s`, // Aplica el retraso al estilo
       }}

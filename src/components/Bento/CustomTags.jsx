@@ -1,12 +1,21 @@
 import { Tag } from "antd";
 const CustomTag = ({ id, label = false }) => {
   const names = {
-    csharp: "C#",
+    csharp: "ASP.NET Core",
     react: "React",
     jwt: "JWT",
     next: "Nextjs",
     powerapps: "Power Apps",
     vite: "ViteJS",
+    antd: "Ant Desing",
+    tailwind: "Tailwind",
+    mvc: "MVC",
+    selenium: "Selenium",
+    sql: "SQL Server",
+    typescript: "TypeScript",
+    leaflet: "Leaflet",
+    websockets: "WebSockets",
+    sqlite: "SQLite"
   };
 
   const colors = {
@@ -16,6 +25,15 @@ const CustomTag = ({ id, label = false }) => {
     next: "black",
     powerapps: "magenta",
     vite: "gold",
+    antd: "red",
+    tailwind: "cyan",
+    mvc: "purple",
+    selenium: "green",
+    sql: "red",
+    typescript: "geekblue",
+    leaflet: "lime",
+    websockets: "geekblue",
+    sqlite: "orange"
   };
 
   const logo = {

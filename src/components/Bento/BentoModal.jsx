@@ -50,9 +50,9 @@ const BentoModal = ({ id, className }) => {
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}
-        width={"1000px"}
+        width={projectsObject[id].mini ? 700 : 1000}
       >
-        <LabelTags tags={projectsObject[id].tags} />
+        <LabelTags tags={projectsObject[id].labelTags} />
         <div className="text-white  ">
           <div
             className={`p-2 space-y-4 ${
@@ -66,7 +66,7 @@ const BentoModal = ({ id, className }) => {
                     <p key={i}>
                       {p}
                       {" "}
-                      {i === arr.length - 1 || !seeMore ? (
+                      {(i === arr.length - 1 || !seeMore) && !projectsObject[id].mini ? (
                         <span
                           className="underline italic text-sky-500"
                           onClick={() => setSeeMore(!seeMore)}

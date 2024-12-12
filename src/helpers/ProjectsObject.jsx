@@ -35,6 +35,7 @@ const projectsObjectRaw = {
     numberColumn: 2,
     images: ["bifrost2", "bifrost1", "bifrost3", "bifrost4", "bifrost5"],
     tags: ["csharp", "react", "jwt"],
+    labelTags: ["csharp", "react", "jwt", "antd", "sql", "typescript"],
     primaryColor: "gray",
     textStyle: `text-6xl text-slate-700 tracking-widest text-2xl pepe `,
   },
@@ -86,6 +87,15 @@ const projectsObjectRaw = {
     numberColumn: 2,
     images: ["sinewave1", "sinewave2", "sinewave3"],
     tags: ["next", "csharp", "jwt"],
+    labelTags: [
+      "next",
+      "csharp",
+      "jwt",
+      "antd",
+      "sql",
+      "typescript",
+      "tailwind",
+    ],
     primaryColor: "stone",
     textStyle: `text-6xl text-black text-2xl pepe font-bold `,
   },
@@ -148,6 +158,7 @@ const projectsObjectRaw = {
     numberColumn: 2,
     images: ["barna1", "barna2", "barna3", "barna4"],
     tags: ["powerapps"],
+    labelTags: ["powerapps"],
     primaryColor: "barnablue",
     textStyle: `text-5xl text-sky-100 tracking-wide text-2xl font-bold `,
   },
@@ -172,8 +183,9 @@ Algo que me gustó del portafolio mencionado es que tiene elementos de la cultur
         `,
     ],
     numberColumn: 2,
-    images: ['portfolio1','portfolio2','portfolio3','portfolio4'],
+    images: ["portfolio1", "portfolio2", "portfolio3", "portfolio4"],
     tags: ["vite"],
+    labelTags: ["vite", "tailwind", "antd"],
     primaryColor: "teal",
     textStyle: `text-5xl text-white tracking-wide text-2xl pepe `,
   },
@@ -224,6 +236,7 @@ Algo que me gustó del portafolio mencionado es que tiene elementos de la cultur
     numberColumn: 2,
     images: ["invoice1"],
     tags: ["csharp"],
+    labelTags: ["csharp", "selenium"],
     primaryColor: "blue",
     textStyle: `text-4xl text-black text-2xl font-consolas `,
   },
@@ -270,10 +283,115 @@ Algo que me gustó del portafolio mencionado es que tiene elementos de la cultur
         `,
     ],
     numberColumn: 2,
-    images: ["transporte1", "transporte2", "transporte3", "transporte4", "transporte5", "transporte6"],
+    images: [
+      "transporte1",
+      "transporte2",
+      "transporte3",
+      "transporte4",
+      "transporte5",
+      "transporte6",
+    ],
     tags: ["react", "csharp"],
+    labelTags: ["react", "csharp", "sql", "leaflet"],
     primaryColor: "barnablue",
     textStyle: `text-4xl text-sky-100 text-2xl font-bold italic `,
+  },
+  hospitalCash: {
+    titleEN: "Hospital Cash Register",
+    titleES: "Caja registradora Hospital",
+    en: [
+      `
+          In August 2024, I developed a cash register application for a hospital using the MVC (Model-View-Controller) pattern. This system manages cash inflows and outflows, ensuring an accurate record of all transactions.
+        `,
+      `
+The application is designed to operate independently, allowing it to continue functioning even if the central system (core) is unavailable. Once the connection to the core is restored, the application automatically synchronizes the recorded data, ensuring that the information is always up-to-date and centralized. This approach guarantees operational continuity in critical environments like hospitals, improving the efficiency and reliability of cash management processes.
+      `,
+      `
+I must say that thanks to this project, my team earned a pizza in the Software Development III course.
+      `,
+    ],
+    es: [
+      `En agosto de 2024, desarrollé una aplicación de registro de efectivo para la caja de un hospital, utilizando el patrón MVC (Modelo-Vista-Controlador). Este sistema permite gestionar los ingresos y egresos de efectivo en la caja, asegurando un registro preciso de las transacciones realizadas.
+      `,
+      `La aplicación está diseñada para funcionar de manera independiente, lo que permite continuar operando incluso si el sistema central (core) no está disponible. Una vez que la conexión con el core se restablece, la aplicación sincroniza automáticamente los datos registrados, garantizando que la información esté siempre actualizada y centralizada. Este enfoque asegura la continuidad operativa en entornos críticos como el hospital, mejorando la eficiencia y confiabilidad del proceso de gestión de caja.
+      `,
+      `He de decir que gracias a este proyecto mi equipo se ganó una pizza en la asignatura de desarrollo de software III
+      `,
+    ],
+    numberColumn: 2,
+    images: ['hospital1','hospital2', 'hospital3'],
+    tags: ["csharp"],
+    labelTags: ["mvc", "csharp", "sqlite"],
+    primaryColor: "mint",
+    textStyle: `text-5xl text-teal-950 text-2xl pepe italic`,
+  },
+  uno: {
+    titleEN: "UNO console",
+    titleES: "UNO consola",
+    en: [
+      `
+          In process...
+        `,
+    ],
+    es: [
+      `
+          En desarrollo...
+        `,
+    ],
+    numberColumn: 1,
+    images: [],
+    tags: ["csharp"],
+    labelTags: ["jwt", "csharp", "sql", "websockets"],
+    primaryColor: "orange",
+    textStyle: `text-6xl text-black text-2xl pepe font-bold text-orange-100 `,
+    mini: true,
+  },
+  membretes: {
+    titleEN: "Membretes API",
+    titleES: "Membretes API",
+    en: [
+      `
+          It is an application that I made in my spare time. It consists in that you write a word and it makes an ASCII art so you can copy it.
+          I made this because in some exercises with console applications I like to put ascii art signs.
+          This is the V1. In the future, I will turn it into an API.
+        `,
+    ],
+    es: [
+      `
+          Es una aplicación que hice en mi tiempo libre. Consiste en que escribes una palabra y genera un arte ASCII para que puedas copiarlo.
+          Hice esto porque en algunos ejercicios con aplicaciones de consola me gusta incluir signos de arte ASCII.
+          Esta es la versión 1 (V1).
+          En el futuro, lo convertiré en una API.
+        `,
+    ],
+    numberColumn: 2,
+    images: [],
+    tags: ["csharp"],
+    labelTags: ["csharp"],
+    primaryColor: "teal",
+    textStyle: `text-4xl text-white text-2xl font-consolas `,
+    mini: true,
+  },
+  chat: {
+    titleEN: "Real time chat",
+    titleES: "Chat en tiempo real",
+    en: [
+      `
+          In process...
+        `,
+    ],
+    es: [
+      `
+          En desarrollo...
+        `,
+    ],
+    numberColumn: 2,
+    images: [],
+    tags: ["csharp"],
+    labelTags: ["csharp", "websockets"],
+    primaryColor: "barnablue",
+    textStyle: `text-6xl text-black text-2xl bodoni font-bold `,
+    mini: true,
   },
 };
 
