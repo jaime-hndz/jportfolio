@@ -1,5 +1,5 @@
 const effect =
-  "hover:translate-y-1 hover:translate-x-1 hover:ml-2 border-r-8 border-b-8 hover:border-none transition ease-in-out";
+  "hover:translate-y-1 hover:translate-x-1 hover:ml-2 border-r-8 border-b-8 hover:border-none transition-all ease-in-out";
 
 export const RowCol = ({
   className,

@@ -9,7 +9,9 @@ import { useTranslation } from "react-i18next";
 const BentoModal = ({ id, className }) => {
   const carouselRef = React.createRef();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const {t} = useTranslation();
+  const [seeMore, setSeeMore] = useState(false);
+
+  const { t } = useTranslation();
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -29,8 +31,10 @@ const BentoModal = ({ id, className }) => {
         onClick={showModal}
       >
         <div className={`${projectsObject[id].textStyle} select-none`}>
-          <DecoderText text={projectsObject[id][`title${t('language')}`] ?? ""} delay={1000} />
-          
+          <DecoderText
+            text={projectsObject[id][`title${t("language")}`] ?? ""}
+            delay={1000}
+          />
         </div>
         <Tags tags={projectsObject[id].tags} />
       </RowCol>
@@ -39,36 +43,60 @@ const BentoModal = ({ id, className }) => {
         footer={null}
         cancelButtonProps={false}
         title={
-          <div className="text-2xl font-bold tracking-widest">
-            {projectsObject[id][`title${t('language')}`]}
+          <div className={`${projectsObject[id].textStyle} text-white`}>
+            {projectsObject[id][`title${t("language")}`]}
           </div>
         }
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}
-        width={1000}
+        width={"1000px"}
       >
-        <div className="text-white  flex">
-          <div className=" p-10 space-y-4 ">
-            {projectsObject[id][t('language').toLowerCase()].map((p,i) => <p key={i}>{p}</p>)}
-          </div>
-          {projectsObject[id].images.length > 0 ? <Carousel className="w-96 h-96" ref={carouselRef}>
-            {projectsObject[id].images.map((i) => (
-              <div
-                key={i}
-                onClick={() => {
-                  carouselRef.current.next();
-                }}
-              >
-                <div
-                  className={`w-96 h-96 bg-contain bg-no-repeat bg-center m-auto ${i}`}
-                ></div>
-              </div>
-            ))}
-          </Carousel> : null}
-          
-        </div>
         <LabelTags tags={projectsObject[id].tags} />
+        <div className="text-white  ">
+          <div
+            className={`p-2 space-y-4 ${
+              seeMore ? "" : ""
+            }   transition-all duration-300`}
+          >
+            {projectsObject[id][t("language").toLowerCase()].map(
+              (p, i, arr) => {
+                if (i === 0 || seeMore) {
+                  return (
+                    <p key={i}>
+                      {p}
+                      {i === arr.length - 1 || !seeMore ? (
+                        <span
+                          className="p-2 underline italic text-sky-500"
+                          onClick={() => setSeeMore(!seeMore)}
+                        >
+                          {!seeMore ? t('readMore') : t('readLess')}
+                        </span>
+                      ) : null}
+                    </p>
+                  );
+                }
+                return null;
+              }
+            )}
+          </div>
+          {projectsObject[id].images.length > 0 ? (
+            <Carousel className="w-full" ref={carouselRef}>
+              {projectsObject[id].images.map((i) => (
+                <div
+                  key={i}
+                  onClick={() => {
+                    carouselRef.current.next();
+                  }}
+                >
+                  <div
+                    className={`w-full h-[600px] bg-contain bg-no-repeat bg-center m-auto ${i}`}
+                  ></div>
+                </div>
+              ))}
+            </Carousel>
+          ) : null}
+        </div>
       </Modal>
     </>
   );
