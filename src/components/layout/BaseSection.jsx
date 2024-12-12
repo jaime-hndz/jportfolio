@@ -29,7 +29,7 @@ export const BaseSection = ({ children, id }) => {
             className={`fixed top-0 left-0 w-full h-full object-cover ${
               isVideoLoaded ? 'opacity-100' : 'opacity-0'
             } transition-opacity duration-700`}
-            src="/src/resources/background.mp4"
+            src="background.mp4"
             autoPlay
             muted
             loop
