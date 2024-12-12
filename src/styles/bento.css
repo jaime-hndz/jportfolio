@@ -107,7 +107,7 @@
 }
 
 .sinewave-preview {
-    background: linear-gradient(to bottom, transparent, rgb(214 211 209)), url('/src/resources/projects/sinewave/sinewave-preview.png');
+    background: linear-gradient(to bottom, transparent, rgb(214 211 209)), url('/src/resources/projects/sinewave/sinewave-preview.gif');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -127,7 +127,7 @@
 }
 
 .barna-preview {
-    background: linear-gradient(to bottom, transparent, rgb(42, 105, 153)), url('/src/resources/projects/barna/barna-preview.png');
+    background: linear-gradient(to bottom, transparent, rgb(42, 105, 153)), url('/src/resources/projects/barna/barna-preview.gif');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -156,7 +156,7 @@
 
 
 .portfolio-preview {
-    background: linear-gradient(to bottom, transparent, black), url('/src/resources/projects/portfolio/portfolio.png');
+    background: linear-gradient(to bottom, transparent, black), url('/src/resources/projects/portfolio/portfolio-preview.gif');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 

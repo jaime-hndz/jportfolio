@@ -8,7 +8,7 @@ export const PrimaryProjectsSection = () => {
   return (
     <div className="bg-gradient-to-b from-slate-900/70 to-slate-900 w-full h-screen flex items-center justify-center relative" id={'projects'}>
 
-      <div className="container px-16">
+      <div className="container px-32">
           <Column className="left">
             <Row className="row1">
               <BentoModal id={"bifrost"} />
