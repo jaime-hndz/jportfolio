@@ -156,44 +156,23 @@ const projectsObjectRaw = {
     titleES: "Portfolio",
     en: [
       `
-          The system uses an API to manage authentication through
-          JWT (JSON Web Tokens) signed with asynchronous cryptographic keys.
-          Users log in via a frontend, where credentials are validated by the API
-          using a repository that manages user and station data. If the credentials
-          are correct, a JWT signed with a private key is generated, containing
-          user information, permissions, and an expiration time.
+          When I started creating my portfolio, I didn't want to use a template because I felt it would lack personality. So, I took on the task of looking at hundreds of portfolios until I found one that matched how I wanted mine to look. I should note that I don't have any UI/UX knowledge. This portfolio is heavily based on Hamish Williams' portfolio. Although Hamish's portfolio repository is public, I redid almost the entire project from scratch (mainly because it uses some technologies that I don't know how to use). I also drew some inspiration from Mees Verberne's portfolio, though to a lesser extent.
         `,
       `
-          Applications consuming the API, such as Sinewave-drawer, verify
-          the JWTs using the public key, ensuring the tokens are genuine
-          and have not expired. Tokens expire after a set time, and to obtain a
-          new one, the user must use a refresh token or authenticate again. The system
-          follows the repository pattern to separate data and business logic,
-          facilitating maintenance and scalability.
+          One thing I liked about the aforementioned portfolio is that it includes elements of Japanese culture, which I've been a fan of for many years. I wanted to keep these elements because they represent some of my interests in popular culture and in general. Additionally, I saw the use of bento box design (also related to Japanese culture) on various websites and was fascinated by its application. Therefore, I decided to include it in my portfolio and hope to use it in future projects.
         `,
     ],
     es: [
       `
-          El sistema utiliza una API para gestionar la autenticación mediante
-          JWT (JSON Web Tokens) firmados con llaves criptográficas asincrónicas.
-          Los usuarios inician sesión a través de un frontend, donde las
-          credenciales son validadas por la API utilizando un repositorio que
-          gestiona los datos de usuarios y estaciones. Si las credenciales son
-          correctas, se genera un JWT firmado con una llave privada que contiene
-          información del usuario, permisos y un tiempo de expiración.
+          Cuando comencé a hacer mi portafolio, no quería usar una plantilla, ya que considero que le resta personalidad. Por eso, me dediqué a ver cientos de portafolios hasta encontrar uno que encajara con la visión que tenía para el mío. Aclaro que no tengo conocimientos de UI/UX. Este está altamente basado en el portafolio de Hamish Williams. Aunque el repositorio del portafolio de Hamish es público, rehice casi todo el proyecto desde cero (principalmente porque utiliza algunas tecnologías que no sé usar). También me inspiré un poco en el de Mees Verberne, aunque en menor medida.
+          
         `,
       `
-          Las aplicaciones que consumen la API, como Sinewave-drawer, verifican
-          los JWT usando la llave pública, asegurando que los tokens sean
-          genuinos y no hayan expirado. Los tokens vencen después de un tiempo
-          establecido y, para obtener uno nuevo, el usuario debe usar un token
-          de actualización o autenticarse nuevamente. El sistema sigue el patrón
-          repositorio para separar la lógica de datos y negocio, lo que facilita
-          su mantenimiento y escalabilidad.
+Algo que me gustó del portafolio mencionado es que tiene elementos de la cultura japonesa, de la cual he sido fan por muchos años. Quería mantener estos elementos, ya que representan algunos de mis gustos en la cultura popular y en general. Por otro lado, el uso del diseño de bento box (también relacionado con la cultura japonesa) lo vi en varios sitios de internet y quedé fascinado con su aplicación. Por eso, decidí incluirlo en mi portafolio y espero utilizarlo en futuros proyectos.
         `,
     ],
     numberColumn: 2,
-    images: [],
+    images: ['portfolio1','portfolio2','portfolio3','portfolio4'],
     tags: ["vite"],
     primaryColor: "teal",
     textStyle: `text-5xl text-white tracking-wide text-2xl pepe `,

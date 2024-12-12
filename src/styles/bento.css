@@ -162,6 +162,22 @@
     background-repeat: no-repeat; 
 }
 
+.portfolio1 {
+    background: url('/src/resources/projects/portfolio/portfolio1.png');
+}
+
+.portfolio2 {
+    background: url('/src/resources/projects/portfolio/portfolio.jpg');
+}
+
+.portfolio3 {
+    background: url('/src/resources/projects/portfolio/portfolio3.png');
+}
+
+.portfolio4 {
+    background: url('/src/resources/projects/portfolio/portfolio2.png');
+}
+
 .transporte-preview {
     background: linear-gradient(to top, transparent, rgb(2 132 199)), url('/src/resources/projects/transporte/transporte-preview.png');
     background-size: cover; 

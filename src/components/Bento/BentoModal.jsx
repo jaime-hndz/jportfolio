@@ -65,12 +65,13 @@ const BentoModal = ({ id, className }) => {
                   return (
                     <p key={i}>
                       {p}
+                      {" "}
                       {i === arr.length - 1 || !seeMore ? (
                         <span
-                          className="p-2 underline italic text-sky-500"
+                          className="underline italic text-sky-500"
                           onClick={() => setSeeMore(!seeMore)}
                         >
-                          {!seeMore ? t('readMore') : t('readLess')}
+                           {!seeMore ? t('readMore') : t('readLess')}
                         </span>
                       ) : null}
                     </p>
@@ -81,7 +82,7 @@ const BentoModal = ({ id, className }) => {
             )}
           </div>
           {projectsObject[id].images.length > 0 ? (
-            <Carousel className="w-full" ref={carouselRef}>
+            <Carousel autoplay className="w-full" ref={carouselRef}>
               {projectsObject[id].images.map((i) => (
                 <div
                   key={i}
