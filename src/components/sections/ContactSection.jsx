@@ -56,15 +56,14 @@ export const ContactSection = () => {
           ) : null}
 
           {visible ? (
-            <div className="flex gap-3 items-center transition ease-in-out italic">
+            <div className="flex gap-3 items-center transition ease-in-out italic text-white text-3xl hover:text-sky-500">
               <h1>Jaime25112002@gmail.com</h1>
-              <Button
+              <div
                 onClick={copyToClipboard}
-                type="text"
-                className="text-white text-3xl hover:text-sky-500"
+                className=""
               >
-                <CopyOutlined />
-              </Button>
+                <CopyOutlined className="italic" />
+              </div>
             </div>
           ) : null}
         </div>

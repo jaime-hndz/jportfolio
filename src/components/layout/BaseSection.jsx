@@ -1,5 +1,8 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+
+const bg = 'https://github.com/jaime-hndz/jportfolio/raw/refs/heads/main/public/background.mp4'
+
 export const BaseSection = ({ children, id }) => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
@@ -34,7 +37,9 @@ export const BaseSection = ({ children, id }) => {
             loop
             playsInline
             onLoadedData={() => setIsVideoLoaded(true)}
-          />
+          >
+            <source src={bg} type="video/mp4" />
+          </video>
           <div className='h-screen w-full overflow-hidden bg-black/50 absolute'></div>
         </>
       )}

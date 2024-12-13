@@ -4,12 +4,14 @@ import { useTranslation } from "react-i18next";
 export const TypingEffect = () => {
   const { t } = useTranslation();
   const [fullText, setFullText] = useState(undefined);
-
+  const rawText = t("title");
   const [displayedText, setDisplayedText] = useState("");
   const typingSpeed = 100;
 
   useEffect(() => {
-    if (fullText) {
+    if (!fullText || fullText !== rawText) {
+      setFullText(t("title"));
+    } else {
       let index = -1;
       setDisplayedText("");
       const typeCharacter = () => {
@@ -25,12 +27,10 @@ export const TypingEffect = () => {
       return () => {
         index = fullText.length;
       };
-    } else {
-      setFullText(t("title"));
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [fullText, typingSpeed]);
+  }, [fullText, typingSpeed, rawText]);
 
   return (
     <div className="text-7xl ">

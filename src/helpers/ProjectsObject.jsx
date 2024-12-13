@@ -160,7 +160,7 @@ const projectsObjectRaw = {
     tags: ["powerapps"],
     labelTags: ["powerapps"],
     primaryColor: "barnablue",
-    textStyle: `text-5xl text-sky-100 tracking-wide text-2xl font-bold `,
+    textStyle: `text-5xl text-white tracking-wide text-2xl font-bold `,
   },
   portfolio: {
     titleEN: "Portfolio",
@@ -399,7 +399,6 @@ export const projectsObject = Object.entries(projectsObjectRaw).reduce(
   (acc, [key, value]) => {
     acc[key] = {
       ...value,
-      //images: value.images.map(i => (`bg-[url('/src/resources/projects/bifrost/${i}')]`))
     };
 
     return acc;
