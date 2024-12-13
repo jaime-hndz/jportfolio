@@ -7,7 +7,7 @@ import { ProjectsScreen } from "../screens/ProjectsScreen";
 export const AppRouter = () => {
     return (
       <>
-        <Router>
+        <Router basename={import.meta.env.DEV ? '/' : '/jportfolio/'}>
           <Routes>
               <Route element={<PortfolioScreen />} path="/" />
               <Route element={<AboutScreen />} path="/about" />
