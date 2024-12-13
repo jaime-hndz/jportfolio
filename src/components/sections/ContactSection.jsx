@@ -9,8 +9,8 @@ export const ContactSection = () => {
   const [capVal, setCapVal] = useState(null);
   const [visible, setVisible] = useState(false);
   const [messageApi, contextHolder] = message.useMessage();
-  const {t, i18n} = useTranslation()
-  
+  const { t, i18n } = useTranslation();
+
   const copyToClipboard = () => {
     navigator.clipboard
       .writeText("jaime25112002@gmail.com")
@@ -33,7 +33,9 @@ export const ContactSection = () => {
       {contextHolder}
       <BaseSection id="contact">
         <div className="text-3xl text-white flex flex-col items-center gap-10 font-bold">
-          <div className=" text-5xl tracking-widest pepe font-bold ">{t('contactMessage')}</div>
+          <div className=" text-5xl tracking-widest pepe font-bold ">
+            {t("contactMessage")}
+          </div>
           {!visible ? (
             <>
               <ReCAPTCHA
@@ -49,19 +51,19 @@ export const ContactSection = () => {
                   onClick={() => setVisible(true)}
                   className="boton"
                 >
-                  {t('seeMail')}
+                  {t("seeMail")}
                 </Button>
               </div>
             </>
           ) : null}
 
           {visible ? (
-            <div className="flex gap-3 items-center transition ease-in-out italic text-white text-3xl hover:text-sky-500">
+            <div
+              onClick={copyToClipboard}
+              className="flex gap-3 items-center transition ease-in-out italic text-white text-3xl hover:text-sky-500"
+            >
               <h1>Jaime25112002@gmail.com</h1>
-              <div
-                onClick={copyToClipboard}
-                className=""
-              >
+              <div>
                 <CopyOutlined className="italic" />
               </div>
             </div>
