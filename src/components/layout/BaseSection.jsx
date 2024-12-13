@@ -1,11 +1,10 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-import background from '/background.mp4'
 export const BaseSection = ({ children, id }) => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   const colors = {
-    home: 'bg-black', // Lo manejaremos de forma especial
+    home: 'bg-black',
     about: "bg-gradient-to-b from-black/50 to-slate-900/70 ",
     projects: "bg-gradient-to-b from-slate-900/70 to-slate-900",
     contact: "bg-slate-900",
@@ -29,7 +28,7 @@ export const BaseSection = ({ children, id }) => {
             className={`fixed top-0 left-0 w-full h-full object-cover ${
               isVideoLoaded ? 'opacity-100' : 'opacity-0'
             } transition-opacity duration-700`}
-            src={background}
+            src={'/background.mp4'}
             autoPlay
             muted
             loop
