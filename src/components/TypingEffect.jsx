@@ -10,21 +10,25 @@ export const TypingEffect = () => {
     const typingSpeed = 100;
   
     useEffect(() => {
-      let index = -1;
-      setDisplayedText("")
-      const typeCharacter = () => {
-        if (index < fullText.length - 1) {
-          setDisplayedText((prev) => prev + fullText[index]);
-          index++;
-          setTimeout(typeCharacter, typingSpeed);
-        }
-      };
-  
-      typeCharacter();
-  
-      return () => {
-        index = fullText.length;
-      };
+
+      if (fullText) {
+        let index = -1;
+        setDisplayedText("")
+        const typeCharacter = () => {
+          if (index < fullText.length - 1) {
+            setDisplayedText((prev) => prev + fullText[index]);
+            index++;
+            setTimeout(typeCharacter, typingSpeed);
+          }
+        };
+    
+        typeCharacter();
+    
+        return () => {
+          index = fullText.length;
+        };
+      }
+
     }, [fullText, typingSpeed]);
   
     return (
