@@ -1,6 +1,6 @@
 import { Column } from "../Bento/Column";
 import { Row } from "../Bento/Row";
-import BentoModal from "../bento/BentoModal";
+import BentoModal from "../Bento/BentoModal";
 import { BentoGoMore } from "../Bento/BentoGoBack";
 
 export const PrimaryProjectsSection = () => {

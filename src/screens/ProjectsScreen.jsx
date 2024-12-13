@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import BentoModal from "../components/bento/BentoModal";
+import BentoModal from "../components/Bento/BentoModal";
 import { BentoGoBack } from "../components/Bento/BentoGoBack";
 import { Row } from "../components/Bento/Row";
 import { Column } from "../components/Bento/Column";
