@@ -37,7 +37,7 @@ const projectsObjectRaw = {
     tags: ["csharp", "react", "jwt"],
     labelTags: ["csharp", "react", "jwt", "antd", "sql", "typescript"],
     primaryColor: "gray",
-    textStyle: `text-6xl text-slate-700 tracking-widest text-2xl pepe `,
+    textStyle: `text-3xl text-slate-700 tracking-widest text-2xl pepe `,
   },
   sinewave: {
     titleEN: "Sinewave Drawer",
@@ -97,7 +97,7 @@ const projectsObjectRaw = {
       "tailwind",
     ],
     primaryColor: "stone",
-    textStyle: `text-6xl text-black text-2xl pepe font-bold `,
+    textStyle: `text-3xl  text-black text-2xl pepe font-bold `,
   },
   barna: {
     titleEN: "Intellectual Production",
@@ -160,7 +160,7 @@ const projectsObjectRaw = {
     tags: ["powerapps"],
     labelTags: ["powerapps"],
     primaryColor: "barnablue",
-    textStyle: `text-5xl text-white tracking-wide text-2xl font-bold `,
+    textStyle: `text-3xl  text-white tracking-wide text-2xl font-bold `,
   },
   portfolio: {
     titleEN: "Portfolio",

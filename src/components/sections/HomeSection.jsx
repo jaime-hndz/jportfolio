@@ -6,8 +6,8 @@ import { TypingEffect } from "../TypingEffect";
 export const HomeSection = () => {
   return (
     <BaseSection id="home">
-      <div className="text-neutral-200  py-3 px-10 relative z-20 pepe translate-x-10">
-        <div className="tracking-widest text-xl deco  ">
+      <div className="text-neutral-200  py-3 px-10 relative z-20 pepe md:translate-x-10 ">
+        <div className="tracking-widest md:text-xl deco text-balance  ">
           <DecoderText text="JAIME HERNÁNDEZ | もんだいかいけつ " delay={1000} />
         </div>
         <TypingEffect />

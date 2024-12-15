@@ -25,6 +25,13 @@ body{
 
 }
 
+@media (max-width: 768px) {
+  .cursor-outline,
+  .cursor-dot {
+    display: none;
+  }
+}
+
 .cursor-outline{
   width: 20px;
   height: 20px;

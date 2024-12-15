@@ -33,8 +33,8 @@ export const TypingEffect = () => {
   }, [fullText, typingSpeed, rawText]);
 
   return (
-    <div className="text-4xl md:text-7xl ">
-      <div className="w-[520px]">
+    <div className="text-4xl md:text-7xl">
+      <div className="md:w-[520px] w-[200px]">
         <h1>
           {displayedText}
           <span className="cursor">|</span>
