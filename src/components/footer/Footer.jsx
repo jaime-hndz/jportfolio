@@ -10,9 +10,9 @@ export const Footer = () => {
         <p>© 2024 Jaime Hernandez.</p>
         <a
           href="humans.txt"
-          className="underline cursor-none hover:text-sky-500 transition-all"
+          className="underline cursor-none hover:text-sky-500 transition-all hidden md:block"
         >
-          {text}
+          {text}.
         </a>
       </div>
     </div>

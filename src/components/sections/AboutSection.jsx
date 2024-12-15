@@ -40,7 +40,7 @@ export const AboutSection = () => {
             <p>{t('aboutText')}</p>
           </div>
         </div>
-        <div className="w-1/2 h-96  bg-contain bg-no-repeat bg-center m-auto bg-[url('/src/resources/profile2.png')]"></div>
+        <div className="w-3/4 h-80 lg:w-1/2 lg:h-96 bg-contain bg-no-repeat bg-center m-auto bg-[url('/src/resources/profile2.png')]"></div>
       </div>
     </BaseSection>
   );

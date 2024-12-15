@@ -15,7 +15,7 @@ export const BaseSection = ({ children, id }) => {
 
   return (
     <div
-      className={`${colors[id]} w-full h-screen flex items-center justify-center relative`}
+      className={`${colors[id]} w-full min-h-screen flex items-center justify-center relative`}
       id={id}
     >
       {id === 'home' && (

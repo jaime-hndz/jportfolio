@@ -16,7 +16,7 @@ export const Menu = () => {
   );
 
   return (
-    <div className=" h-screen fixed gap-7 pt-5 z-50  text-white flex flex-col items-center lg:-mx-4  text-2xl h-screen">
+    <div className=" h-screen fixed gap-7 pt-1 md:pt-5 z-50  text-white flex flex-col items-center lg:-mx-4  text-2xl h-screen">
       <div>
         <div className="logo" onClick={() => scrollToSection("home")} />
       </div>
