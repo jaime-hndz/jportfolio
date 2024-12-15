@@ -16,6 +16,7 @@ export const PortfolioScreen = () => {
         <div className=" w-screen w-full">
           <HomeSection />
           <BlankSection id='home' />
+
           <AboutSection />
           <BlankSection  id='about' />
 
@@ -23,7 +24,6 @@ export const PortfolioScreen = () => {
           <BlankSection  id='projects' />
           
           <ContactSection />
-          
           <Footer />
         </div>
         <Menu2 />

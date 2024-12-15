@@ -6,7 +6,7 @@ export const BlankSection = ({ id }) => {
   };
   return (
     <div
-      className={`${colors[id]} w-full h-[50vh] flex items-center justify-center relative`}
+      className={`${colors[id]} w-full h-[35vh] flex items-center justify-center relative`}
     ></div>
   );
 };

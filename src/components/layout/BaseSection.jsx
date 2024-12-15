@@ -53,6 +53,5 @@ export const BaseSection = ({ children, id }) => {
 
 BaseSection.propTypes = {
   children: PropTypes.node.isRequired,
-  bgcolor: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired
 };

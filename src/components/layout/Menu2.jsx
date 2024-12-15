@@ -30,7 +30,6 @@ export const Menu2 = () => {
         className="p-4 text-4xl transition ease-in-out  hover:text-sky-400 hover:-translate-x-2 cursor-none"
         target="_blank"
         to="https://www.linkedin.com/in/jaime-rafael-hernandez-746a14203 "
-        blan
       >
         {" "}
         <LinkedinFilled />{" "}
