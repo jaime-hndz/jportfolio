@@ -6,7 +6,7 @@ export const BentoGoBack = () => {
   const navigate = useNavigate();
   return (
     <RowCol
-      onClick={() => navigate(-1)}
+      onClick={() => navigate('/')}
       className={`left flex items-center justify-center relative  text-white flex-col gap-1`}
       color="red"
     >
@@ -16,18 +16,23 @@ export const BentoGoBack = () => {
   );
 };
 
-export const BentoGoMore = () => {
+export const BentoGoMore = ({label = false}) => {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
-  return (
+  return !label ? (
     <RowCol
       onClick={() => navigate('/projects')}
-      className={`left flex items-center justify-center relative text-white flex-col gap-4`}
+      className={`left flex items-center justify-center relative text-white flex-col gap-4 hidden lg:flex`}
       color="teal"
     >
       <div className="text-5xl ">続 </div>
       <div className="text-xl ">({t('goToProjects')})</div>
     </RowCol>
-  );
+  ): <div
+  onClick={() => navigate('/projects')}
+  className={`text-3xl pepe italic lg:hidden flex items-center justify-center relative text-white`}
+  >
+    {t('goToProjects')}
+  </div>;
 };

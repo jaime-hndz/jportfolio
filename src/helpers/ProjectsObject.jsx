@@ -190,8 +190,8 @@ Algo que me gustó del portafolio mencionado es que tiene elementos de la cultur
     textStyle: `text-5xl text-white tracking-wide text-2xl pepe `,
   },
   invoice: {
-    titleEN: "Handdo.Invoice",
-    titleES: "Handdo.Invoice",
+    titleEN: "Handdo .Invoice",
+    titleES: "Handdo .Invoice",
     en: [
       `
           Handdo.Invoice is a module within the Handdo system by K3D Technology,
@@ -298,7 +298,7 @@ Algo que me gustó del portafolio mencionado es que tiene elementos de la cultur
   },
   hospitalCash: {
     titleEN: "Hospital Cash Register",
-    titleES: "Caja registradora Hospital",
+    titleES: "Gestión Financiera",
     en: [
       `
           In August 2024, I developed a cash register application for a hospital using the MVC (Model-View-Controller) pattern. This system manages cash inflows and outflows, ensuring an accurate record of all transactions.

@@ -1,9 +1,13 @@
 .container{
-    width: 1000px;
-    height: 700px;
+    max-width: 1000px;
+    min-height: 700px;
     padding: 1em;
     display: flex;
     gap: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 .col-left{
     flex: 2;

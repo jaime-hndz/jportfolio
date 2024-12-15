@@ -27,7 +27,7 @@ export const Menu2 = () => {
   return (
     <div className=" h-screen fixed right-0 pt-1 z-50 font-consolas text-white flex flex-col items-center text-2xl">
       <Link
-        className="p-4 text-4xl transition ease-in-out  hover:text-sky-400 hover:-translate-x-2 cursor-none"
+        className="p-4 text-4xl transition ease-in-out  hover:text-sky-400 hover:-translate-x-2 cursor-none hidden md:block"
         target="_blank"
         to="https://www.linkedin.com/in/jaime-rafael-hernandez-746a14203 "
       >
@@ -35,7 +35,7 @@ export const Menu2 = () => {
         <LinkedinFilled />{" "}
       </Link>
       <Link
-        className="p-4 text-4xl transition ease-in-out  hover:text-sky-400 hover:-translate-x-2 cursor-none"
+        className="p-4 text-4xl transition ease-in-out  hover:text-sky-400 hover:-translate-x-2 cursor-none hidden md:block"
         target="_blank"
         to="https://github.com/jaime-hndz"
       >
