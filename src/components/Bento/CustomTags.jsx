@@ -61,7 +61,7 @@ export const Tags = ({ tags }) => (
   </div>
 );
 export const LabelTags = ({ tags }) => (
-  <div className=" flex  ">
+  <div className=" flex flex-wrap ">
     {tags.map((t) => (
       <CustomTag key={t} id={t} label={true} />
     ))}

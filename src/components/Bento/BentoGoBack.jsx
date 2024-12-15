@@ -7,7 +7,7 @@ export const BentoGoBack = () => {
   return (
     <RowCol
       onClick={() => navigate('/')}
-      className={`left flex items-center justify-center relative  text-white flex-col gap-1`}
+      className={`left flex items-center justify-center relative  text-white flex-row-reverse lg:flex-col gap-1`}
       color="red"
     >
       <div className={"text-5xl"} >出口</div>
@@ -31,7 +31,7 @@ export const BentoGoMore = ({label = false}) => {
     </RowCol>
   ): <div
   onClick={() => navigate('/projects')}
-  className={`text-3xl pepe italic lg:hidden flex items-center justify-center relative text-white`}
+  className={`text-3xl pepe italic hover:text-sky-500 lg:hidden flex items-center justify-center relative text-white`}
   >
     {t('goToProjects')}
   </div>;

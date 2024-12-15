@@ -10,16 +10,16 @@ export const ProjectsScreen = () => {
   return (
     <div className="bg-gray-900 transtion ease-in-out h-full">
       <div className="flex items-center justify-center">
-        <div className="container">
+        <div className="container lg:flex-row flex flex-col">
           <Column className="left">
-            <Row className="row1">
+            <Row className="row1 lg:flex-row flex flex-col-reverse">
               <BentoModal id={"bifrost"} />
               <BentoGoBack />
             </Row>
             <Row className={`row3`}>
               <BentoModal id={"sinewave"} />
             </Row>
-            <Row className="row3">
+            <Row className="row3 lg:flex-row flex flex-col">
               <BentoModal id={"invoice"} />
               <BentoModal id={"transporte"} />
             </Row>
@@ -35,14 +35,14 @@ export const ProjectsScreen = () => {
         </div>
       </div>
       <div className="flex items-center justify-center -translate-y-4">
-        <div className="h-[500px] container">
+        <div className="h-fit lg:h-[500px] container lg:flex-row flex flex-col">
           <Column className="right">
             <Row className={`row3`}>
               <BentoModal id={"hospitalCash"} />
             </Row>
           </Column>
           <Column className="left">
-            <Row className="row1">
+            <Row className="row1 lg:flex-row flex flex-col">
               <BentoModal id={"membretes"} className={'left'} />
               <BentoModal id={"uno"} />
             </Row>
